@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Satoshi-LightItalic';
+	src: url(../../assets/fonts/Satoshi-LightItalic-531bedcde68e370072a5baecf3f073c6.woff2) format('woff2'),
+	url(../../assets/fonts/Satoshi-LightItalic-6a5946cbafd51f5d2b3af88e71ae4ac9.woff) format('woff'),
+	url(../../assets/fonts/Satoshi-LightItalic-808da931cf6dde9ce3836108c42e0069.ttf) format('truetype');
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}

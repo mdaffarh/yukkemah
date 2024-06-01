@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Satoshi-MediumItalic';
+	src: url(../../assets/fonts/Satoshi-MediumItalic-16ad3cf12e5781566ba4ebe7435b4c65.woff2) format('woff2'),
+	url(../../assets/fonts/Satoshi-MediumItalic-baab7a1caa2b9fd6772d8b9ea16dd3e8.woff) format('woff'),
+	url(../../assets/fonts/Satoshi-MediumItalic-63421051b824be4e742d6720e7d41c7f.ttf) format('truetype');
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}

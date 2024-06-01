@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Satoshi-Variable';
+	src: url(../../assets/fonts/Satoshi-Variable-a25a9552571f1526ab315f1d65620811.woff2) format('woff2'),
+	url(../../assets/fonts/Satoshi-Variable-61196ac29686b7dad218f6a3c2804e99.woff) format('woff'),
+	url(../../assets/fonts/Satoshi-Variable-e11bc7488371b2d824db3665d1cef10e.ttf) format('truetype');
+	font-weight: 300 900;
+	font-style: normal;
+	font-display: swap;
+}

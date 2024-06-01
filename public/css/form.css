@@ -1,0 +1,12 @@
+:root {
+    --black : #403F45; 
+    --navy : #363C5C; 
+    --yellow-1 : #FECE7A; 
+    --yellow-2 : #DDA955; 
+    --white : #EFEFEF; 
+  }
+
+form label{
+    color: var(--navy);
+    font-weight: bolder;
+}

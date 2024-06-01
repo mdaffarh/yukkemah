@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Satoshi-BlackItalic';
+	src: url(../../assets/fonts/Satoshi-BlackItalic-f738d1f72589acd9d5d43fff16c5644d.woff2) format('woff2'),
+	url(../../assets/fonts/Satoshi-BlackItalic-4b3c25e6a1cab55a34b0f1d1d15414ea.woff) format('woff'),
+	url(../../assets/fonts/Satoshi-BlackItalic-2a05abfa78329eb58cbb138f8d9ef424.ttf) format('truetype');
+	font-weight: 900;
+	font-style: italic;
+	font-display: swap;
+}

@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Satoshi-Light';
+	src: url(../../assets/fonts/Satoshi-Light-7a820cf3fdc20458036341abc3fd7cdd.woff2) format('woff2'),
+	url(../../assets/fonts/Satoshi-Light-d63e26343e7b8cc4c369badc3bbf799f.woff) format('woff'),
+	url(../../assets/fonts/Satoshi-Light-b4e2f44aa2926ce7f073127ef8ed52be.ttf) format('truetype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
