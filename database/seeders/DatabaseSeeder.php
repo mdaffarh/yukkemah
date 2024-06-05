@@ -23,6 +23,16 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
+        User::create([
+            'username' => 'admin',
+            'password' => '3001',
+            'role' => 'admin',
+            'name' => 'Admin',
+            'gender' => 'Laki-laki',
+            'email' => 'admin@gmail.com',
+            'address' => 'Depok'
+        ]);
+
         // Kategori
         $categories = [
             [

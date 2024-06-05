@@ -14,6 +14,7 @@
 
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
     class="scrollspy-example">
+    @include('sweetalert::alert')
 
     <nav class="navbar navbar-expand-md fixed-top navbar-shrink py-3 navbar-light" id="mainNav"
         style="background-color: var(--yellow-1)">
@@ -28,7 +29,30 @@
                     <li class="nav-item"><a class="nav-link" href="#equipments"><strong>Perlengkapan</strong></a></li>
                     <li class="nav-item"><a class="nav-link" href="#testimonies"><strong>Testimoni</strong></a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact"><strong>Kontak</strong></a></li>
-                </ul><a class="btn btn-primary shadow" role="button" href="signup.html">Daftar</a>
+                </ul>
+
+                <ul class="mt-1 mt-lg-0 p-0 m-0 nav-item dropdown">
+                    @auth
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Halo! {{ auth()->user()->name }}
+                        </a>
+                        <ul class="dropdown-menu" style="border-radius:10px">
+                            <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <form action="/logout" method="POST">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">Logout</button>
+                                </form>
+                            </li>
+                        </ul>
+                    @else
+                        <a class="btn btn-primary shadow" role="button" href="/login">Masuk</a>
+                    @endauth
+                </ul>
             </div>
         </div>
     </nav>

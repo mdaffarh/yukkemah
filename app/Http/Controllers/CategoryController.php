@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\ValidationException;
 
 class CategoryController extends Controller
@@ -99,10 +98,6 @@ class CategoryController extends Controller
         } catch (\Throwable $th) {
             toast('Data gagal dihapus', 'error');
             return back();
-        }
-
-        if ($category->image) {
-            Storage::delete($category->image);
         }
 
         toast('Data berhasil dihapus', 'success');

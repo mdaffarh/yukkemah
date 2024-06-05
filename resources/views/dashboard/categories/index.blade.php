@@ -12,7 +12,6 @@
                 <!-- Form Add Start-->
                 <div class="d-flex flex-row-reverse">
                     <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#formAdd"
-                        onclick="select2Enabler('formAdd')">
                         Tambah Data
                     </button>
 
@@ -74,7 +73,6 @@
                                             {{-- Update Button --}}
                                             <button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal"
                                                 data-bs-target="#edit{{ $c->id }}"
-                                                onclick="select2Enabler('edit{{ $c->id }}')">
                                                 <span data-bs-toggle="tooltip" data-bs-title="Edit Data">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">

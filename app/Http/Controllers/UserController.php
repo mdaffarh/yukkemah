@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Brand;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
-class BrandController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('dashboard.brands.index', [
-            'brands' => Brand::all()
+        return view('dashboard.users.index', [
+            'users' => User::where('role', '!=', 'admin')->get()
         ]);
     }
 
@@ -33,7 +33,12 @@ class BrandController extends Controller
     {
         try {
             $validatedData = $request->validate([
-                'name' => 'required'
+                'username' => 'required|unique:users',
+                'password' => 'required',
+                'name' => 'required',
+                'gender' => 'required',
+                'email' => 'required',
+                'address' => 'required'
             ]);
         } catch (ValidationException $e) {
             toast('Data gagal ditambahkan', 'error');
@@ -43,16 +48,16 @@ class BrandController extends Controller
                 ->with('modal_id', 'formAdd');
         }
 
-        Brand::create($validatedData);
+        User::create($validatedData);
 
         toast('Data berhasil ditambahkan', 'success');
-        return redirect('/dashboard/brands');
+        return redirect('/dashboard/users');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Brand $brand)
+    public function show(User $user)
     {
         //
     }
@@ -60,7 +65,7 @@ class BrandController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Brand $brand)
+    public function edit(User $user)
     {
         //
     }
@@ -68,12 +73,22 @@ class BrandController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Brand $brand)
+    public function update(Request $request, User $user)
     {
         try {
-            $validatedData = $request->validate([
-                'name' => 'required'
-            ]);
+            $rules = [
+                'password' => 'required',
+                'name' => 'required',
+                'gender' => 'required',
+                'email' => 'required',
+                'address' => 'required'
+            ];
+
+            if ($request->username != $user->username) {
+                $rules['username'] = 'required|unique:users';
+            }
+
+            $validatedData = $request->validate($rules);
         } catch (ValidationException $e) {
             toast('Data gagal ditambahkan', 'error');
             return back()
@@ -82,25 +97,25 @@ class BrandController extends Controller
                 ->with('modal_id', 'formAdd');
         }
 
-        $brand->update($validatedData);
+        $user->update($validatedData);
 
         toast('Data berhasil diedit', 'success');
-        return redirect('/dashboard/brands');
+        return redirect('/dashboard/users');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Brand $brand)
+    public function destroy(User $user)
     {
         try {
-            $brand->delete();
+            $user->delete();
         } catch (\Throwable $th) {
             toast('Data gagal dihapus', 'error');
             return back();
         }
 
         toast('Data berhasil dihapus', 'success');
-        return redirect('/dashboard/brands');
+        return redirect('/dashboard/users');
     }
 }
