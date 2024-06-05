@@ -21,6 +21,7 @@ class EquipmentFactory extends Factory
             'price_per_day' => fake()->numberBetween(20000, 200000),
             'description' => fake()->paragraph(),
             'category_id' => rand(1, 3),
+            'brand_id' => rand(1, 3),
             'stock' => rand(0, 5),
             'on_rent' => rand(0, 5)
         ];

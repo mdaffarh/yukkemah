@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Brand;
 use App\Models\Category;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -21,6 +22,7 @@ return new class extends Migration
             $table->integer('stock')->nullable();
             $table->integer('on_rent')->nullable();
             $table->foreignIdFor(Category::class)->nullable();
+            $table->foreignIdFor(Brand::class)->nullable();
             $table->timestamps();
         });
     }

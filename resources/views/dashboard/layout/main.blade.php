@@ -5,7 +5,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Yuk! Kemah - Dashboard</title>
+    <title>
+        @if (View::hasSection('title'))
+            Yuk! Kemah - @yield('title')
+        @else
+            Yuk! Kemah - Dashboard
+        @endif
+    </title>
     {{-- custom css --}}
     <link rel="stylesheet" href="{{ asset('css/landing.css') }}">
     <link rel="stylesheet" href="{{ asset('css/form.css') }}">
@@ -48,17 +54,50 @@
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link" href="index.html"><i
-                                class="fas fa-tachometer-alt me-2"></i><span>Dashboard</span></a></li>
-                    <li class="nav-item"><a class="{{ Request::is('dashboard/equipments*') ? 'active' : '' }} nav-link"
-                            href="/dashboard/equipments"><i class=" me-2 fas fa-user"></i><span>Peralatan</span></a>
+                    <li class="nav-item">
+                        <a class="{{ Request::is('dashboard') ? 'active' : '' }} nav-link" href="/dashboard">
+                            <i class=" fa solid fa-chart-line"></i>
+                            <span class="ms-md-1">Dashboard</span>
+                        </a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="profile.html"><i
-                                class=" me-2 fas fa-user"></i><span>Pelanggan</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="table.html"><i
-                                class=" me-2 fas fa-table"></i><span>Penyewaan</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html"><i
-                                class=" me-2 far fa-user-circle"></i><span>Report</span></a></li>
+                    <li class="nav-item"><a class="{{ Request::is('dashboard/rentals*') ? 'active' : '' }} nav-link"
+                            href="/dashboard/rentals"><i class="  fa solid fa-table"></i><span
+                                class="ms-md-2">Penyewaan</span>
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="{{ Request::is('dashboard/payments*') ? 'active' : '' }} nav-link"
+                            href="/dashboard/payments"><i class="  fa solid fa-money-bill"></i><span
+                                class="ms-md-1">Pembayaran</span>
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="{{ Request::is('dashboard/reports*') ? 'active' : '' }} nav-link"
+                            href="/dashboard/reports"><i class=" fa solid fa-file-pdf"></i><span
+                                class="ms-md-2">Report</span>
+                        </a>
+                    </li>
+                    <hr>
+                    <li class="nav-item">
+                        <a class="{{ Request::is('dashboard/equipments*') ? 'active' : '' }} nav-link"
+                            href="/dashboard/equipments">
+                            <i class="fa solid fa-toolbox"></i>
+                            <span class="ms-md-1">Peralatan</span>
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="{{ Request::is('dashboard/users*') ? 'active' : '' }} nav-link"
+                            href="/dashboard/users"><i class="fas fa-user"></i><span class="ms-md-2">Pelanggan</span>
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="{{ Request::is('dashboard/categories*') ? 'active' : '' }} nav-link"
+                            href="/dashboard/categories"><i class="fa solid fa-list"></i><span
+                                class="ms-md-2">Kategori</span>
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="{{ Request::is('dashboard/brands*') ? 'active' : '' }} nav-link"
+                            href="/dashboard/brands"><i class="fa solid fa-certificate"></i><span
+                                class="ms-md-2">Merek</span>
+                        </a>
+                    </li>
+
                 </ul>
                 <div class="text-center d-none d-md-inline text-dark"><button class="btn rounded-circle border-0"
                         id="sidebarToggle" type="button"></button></div>

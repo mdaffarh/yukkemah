@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Equipment;
 use Illuminate\Http\Request;
@@ -16,8 +17,9 @@ class EquipmentController extends Controller
     public function index()
     {
         return view('dashboard.equipments.index', [
-            'equipments' => Equipment::with('category')->get(), // with = eager load
-            'categories' => Category::all()
+            'equipments' => Equipment::with('category', 'brand')->get(), // with = eager load
+            'categories' => Category::all(),
+            'brands' => Brand::all(),
         ]);
     }
 
@@ -42,6 +44,7 @@ class EquipmentController extends Controller
                 'image' => 'image|file',
                 'stock' => 'required',
                 'category_id' => 'required',
+                'brand_id' => 'required',
             ]);
         } catch (ValidationException $e) {
             toast('Data gagal ditambahkan', 'error');
@@ -82,7 +85,35 @@ class EquipmentController extends Controller
      */
     public function update(Request $request, Equipment $equipment)
     {
-        //
+        try {
+            $validatedData = $request->validate([
+                'name' => 'required',
+                'price_per_day' => 'required',
+                'description' => 'required',
+                'image' => 'image|file',
+                'stock' => 'required',
+                'category_id' => 'required',
+                'brand_id' => 'required',
+            ]);
+        } catch (ValidationException $e) {
+            toast('Data gagal ditambahkan', 'error');
+            return back()
+                ->withInput()
+                ->withErrors($e->validator)
+                ->with('modal_id', 'formAdd');
+        }
+
+        if ($request->file('image')) {
+            if ($equipment->image) {
+                Storage::delete($equipment->image);
+            }
+            $validatedData['image'] = $request->file('image')->store('images');
+        }
+
+        $equipment->update($validatedData);
+
+        toast('Data berhasil diedit', 'success');
+        return redirect('/dashboard/equipments');
     }
 
     /**

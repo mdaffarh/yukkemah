@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Equipment;
 use App\Models\User;
@@ -41,6 +42,26 @@ class DatabaseSeeder extends Seeder
 
         foreach ($categories as $c) {
             Category::create($c);
+        }
+
+        // Brand
+        $brands = [
+            [
+                'name' => 'Eiger'
+            ],
+            [
+                'name' => 'Nike'
+            ],
+            [
+                'name' => 'New Balance'
+            ],
+            [
+                'name' => 'Adidas'
+            ]
+        ];
+
+        foreach ($brands as $b) {
+            Brand::create($b);
         }
     }
 }
