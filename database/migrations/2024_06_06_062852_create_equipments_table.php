@@ -20,9 +20,11 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->string('image')->nullable();
             $table->integer('stock')->nullable();
-            $table->integer('on_rent')->nullable();
-            $table->foreignIdFor(Category::class)->nullable();
-            $table->foreignIdFor(Brand::class)->nullable();
+            $table->integer('on_rent')->nullable()->ondelete();
+            $table->foreignIdFor(Category::class)->nullable()->constrained()
+                ->onDelete('restrict');
+            $table->foreignIdFor(Brand::class)->nullable()->constrained()
+                ->onDelete('restrict');
             $table->timestamps();
         });
     }

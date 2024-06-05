@@ -22,7 +22,6 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        Equipment::factory(10)->create();
 
         // Kategori
         $categories = [
@@ -63,5 +62,7 @@ class DatabaseSeeder extends Seeder
         foreach ($brands as $b) {
             Brand::create($b);
         }
+
+        Equipment::factory(10)->create();
     }
 }

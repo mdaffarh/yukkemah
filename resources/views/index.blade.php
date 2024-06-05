@@ -12,10 +12,15 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example">
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
+    class="scrollspy-example">
 
-    <nav class="navbar navbar-expand-md fixed-top navbar-shrink py-3 navbar-light" id="mainNav" style="background-color: var(--yellow-1)">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><img src="img/yukkemah.png" width="112" height="57"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+    <nav class="navbar navbar-expand-md fixed-top navbar-shrink py-3 navbar-light" id="mainNav"
+        style="background-color: var(--yellow-1)">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#header"><img
+                    src="img/yukkemah.png" width="112" height="57"></a><button data-bs-toggle="collapse"
+                class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle
+                    navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"></li>
@@ -33,8 +38,10 @@
             <div class="row pt-5">
                 <div class="py-5 col-md-8 col-xxl-10 text-center text-md-start mx-auto">
                     <div class="text-center">
-                        <h1 class="display-4 fw-bold text-warning mb-5"><strong>Tempat sewa peralatan berkemah dengan lebih dari 200+ pelanggan.</strong></h1>
-                        <p class="fs-5 mb-5" style="color: var(--navy)">Menyediakan berbagai pilihan peralatan kemah dari sepatu outdoor hingga peralatan survival lainnya.</p>
+                        <h1 class="display-4 fw-bold text-warning mb-5"><strong>Tempat sewa peralatan berkemah dengan
+                                lebih dari 200+ pelanggan.</strong></h1>
+                        <p class="fs-5 mb-5" style="color: var(--navy)">Menyediakan berbagai pilihan peralatan kemah
+                            dari sepatu outdoor hingga peralatan survival lainnya.</p>
                     </div>
                 </div>
             </div>
@@ -51,43 +58,65 @@
             <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
                 <div class="col" data-aos="fade-up">
                     <div class="card d-flex justify-content-center">
-                        <div class="card-body"  style="padding:0px;">
-                                <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/3/14/0b8d28bb-579e-44b1-b302-03b8a6e90d89.jpg" class="img-fluid" alt="">
-                                <div class="p-3">
-                                    <h4 class="fw-bold mt-3">New Balance Fresh Foam X Hierro v7</h4>
-                                    <p class="text-muted"> For those who take going off the beaten path literally, there’s the Fresh Foam X Hierro, a dedicated, off-road application of our best running technology. </p>
-                                    <button class="btn btn-sm px-0" type="button">Sewa&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
-                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
-                                        </svg><br></button>
-                                </div>
+                        <div class="card-body" style="padding:0px;">
+                            <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/3/14/0b8d28bb-579e-44b1-b302-03b8a6e90d89.jpg"
+                                class="img-fluid" alt="">
+                            <div class="p-3">
+                                <h4 class="fw-bold mt-3">New Balance Fresh Foam X Hierro v7</h4>
+                                <p class="text-muted"> For those who take going off the beaten path literally, there’s
+                                    the Fresh Foam X Hierro, a dedicated, off-road application of our best running
+                                    technology. </p>
+                                <button class="btn btn-sm px-0" type="button">Sewa&nbsp;<svg
+                                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8">
+                                        </path>
+                                    </svg><br></button>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col" data-aos="fade-up">
                     <div class="card d-flex justify-content-center">
-                        <div class="card-body"  style="padding:0px;">
-                                <img src="https://www.adidas.co.id/media/catalog/product/i/e/ie5127_2_footwear_photography_side20lateral20view_grey.jpg" class="img-fluid" alt="">
-                                <div class="p-3">
-                                    <h4 class="fw-bold mt-3">Terrex Free Hiker GORE-TEX Hiking Shoes 2.0</h4>
-                                    <p class="text-muted"> Lightweight hiking shoes offer next-level comfort and support to extend your range in the mountains. A BOOST midsole brings energy to every step to keep you moving on hikes long and short.  </p>
-                                    <button class="btn btn-sm px-0" type="button">Sewa&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
-                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
-                                        </svg><br></button>
-                                </div>
+                        <div class="card-body" style="padding:0px;">
+                            <img src="https://www.adidas.co.id/media/catalog/product/i/e/ie5127_2_footwear_photography_side20lateral20view_grey.jpg"
+                                class="img-fluid" alt="">
+                            <div class="p-3">
+                                <h4 class="fw-bold mt-3">Terrex Free Hiker GORE-TEX Hiking Shoes 2.0</h4>
+                                <p class="text-muted"> Lightweight hiking shoes offer next-level comfort and support to
+                                    extend your range in the mountains. A BOOST midsole brings energy to every step to
+                                    keep you moving on hikes long and short. </p>
+                                <button class="btn btn-sm px-0" type="button">Sewa&nbsp;<svg
+                                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8">
+                                        </path>
+                                    </svg><br></button>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col" data-aos="fade-up">
                     <div class="card d-flex justify-content-center">
-                        <div class="card-body"  style="padding:0px;">
-                                <img src="https://nb.scene7.com/is/image/NB/mthimcge_nb_02_i?$pdpflexf2$&wid=440&hei=440" class="img-fluid" alt="">
-                                <div class="p-3">
-                                    <h4 class="fw-bold mt-3">Fresh Foam X Hierro Mid Gore-Tex®</h4>
-                                    <p class="text-muted"> These trail running shoes employ a Vibram® Megagrip outsole, mid-cut upper with GORE-TEX® waterproof fabric, and toe protection to create a protective shell of durability and traction around the signature Fresh Foam X cushioning. </p>
-                                    <button class="btn btn-sm px-0" type="button">Sewa&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
-                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
-                                        </svg><br></button>
-                                </div>
+                        <div class="card-body" style="padding:0px;">
+                            <img src="https://nb.scene7.com/is/image/NB/mthimcge_nb_02_i?$pdpflexf2$&wid=440&hei=440"
+                                class="img-fluid" alt="">
+                            <div class="p-3">
+                                <h4 class="fw-bold mt-3">Fresh Foam X Hierro Mid Gore-Tex®</h4>
+                                <p class="text-muted"> These trail running shoes employ a Vibram® Megagrip outsole,
+                                    mid-cut upper with GORE-TEX® waterproof fabric, and toe protection to create a
+                                    protective shell of durability and traction around the signature Fresh Foam X
+                                    cushioning. </p>
+                                <button class="btn btn-sm px-0" type="button">Sewa&nbsp;<svg
+                                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8">
+                                        </path>
+                                    </svg><br></button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -102,43 +131,67 @@
             <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
                 <div class="col" data-aos="fade-up">
                     <div class="card d-flex justify-content-center">
-                        <div class="card-body"  style="padding:0px;background-color:var(--yellow-2);">
-                                <img src="https://d1yutv2xslo29o.cloudfront.net/product/variant/photo/5896a08f-8ed6-43fe-a013-86fd2a9a0eac.jpg" class="img-fluid" alt="">
-                                <div class="p-3">
-                                    <h4 class="fw-bold mt-3 text-white">CAMFEST BACKPACK 30L</h4>
-                                    <p class="text-white"> Ransel Camfest Backpack 30L siap temani kamu berpergian akhir pekan ini. Desain bukaan depan memberimu akses mudah untuk mengemas bawaanmu ke dalam kompartemen utamanya yang luas, bahkan perlengkapanmu untuk perjalanan 2-3 hari. </p>
-                                    <button class="btn btn-sm text-white px-0" type="button">Sewa&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
-                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
-                                        </svg><br></button>
-                                </div>
+                        <div class="card-body" style="padding:0px;background-color:var(--yellow-2);">
+                            <img src="https://d1yutv2xslo29o.cloudfront.net/product/variant/photo/5896a08f-8ed6-43fe-a013-86fd2a9a0eac.jpg"
+                                class="img-fluid" alt="">
+                            <div class="p-3">
+                                <h4 class="fw-bold mt-3 text-white">CAMFEST BACKPACK 30L</h4>
+                                <p class="text-white"> Ransel Camfest Backpack 30L siap temani kamu berpergian akhir
+                                    pekan ini. Desain bukaan depan memberimu akses mudah untuk mengemas bawaanmu ke
+                                    dalam kompartemen utamanya yang luas, bahkan perlengkapanmu untuk perjalanan 2-3
+                                    hari. </p>
+                                <button class="btn btn-sm text-white px-0" type="button">Sewa&nbsp;<svg
+                                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8">
+                                        </path>
+                                    </svg><br></button>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col" data-aos="fade-up">
                     <div class="card d-flex justify-content-center">
-                        <div class="card-body"  style="padding:0px;background-color:var(--yellow-2);">
-                                <img src="https://www.consina.com/wp-content/uploads/2023/04/everest1.jpg" class="img-fluid" alt="">
-                                <div class="p-3">
-                                    <h4 class="fw-bold mt-3 text-white">CONSINA EVEREST 60+5L EXPERT SERIES RANSEL GUNUNG</h4>
-                                    <p class="text-white">Consina Everest hadir sebagai teman petualanganmu ke tempat tempat eksotis dunia. Menampilkan inovasi terbaru dari Consina, Everest menggunakan bahan dan design terbaik untuk ransel di kelas 60-65L. </p>
-                                    <button class="btn btn-sm text-white px-0" type="button">Sewa&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
-                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
-                                        </svg><br></button>
-                                </div>
+                        <div class="card-body" style="padding:0px;background-color:var(--yellow-2);">
+                            <img src="https://www.consina.com/wp-content/uploads/2023/04/everest1.jpg"
+                                class="img-fluid" alt="">
+                            <div class="p-3">
+                                <h4 class="fw-bold mt-3 text-white">CONSINA EVEREST 60+5L EXPERT SERIES RANSEL GUNUNG
+                                </h4>
+                                <p class="text-white">Consina Everest hadir sebagai teman petualanganmu ke tempat
+                                    tempat eksotis dunia. Menampilkan inovasi terbaru dari Consina, Everest menggunakan
+                                    bahan dan design terbaik untuk ransel di kelas 60-65L. </p>
+                                <button class="btn btn-sm text-white px-0" type="button">Sewa&nbsp;<svg
+                                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8">
+                                        </path>
+                                    </svg><br></button>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col" data-aos="fade-up">
                     <div class="card d-flex justify-content-center">
-                        <div class="card-body"  style="padding:0px;background-color:var(--yellow-2);">
-                                <img src="https://d1yutv2xslo29o.cloudfront.net/product/variant/media/web/910009354_Image1_1_fcd2.webp" class="img-fluid" alt="">
-                                <div class="p-3">
-                                    <h4 class="fw-bold mt-3 text-white">Z-HYPERLITE SUMMIT 35</h4>
-                                    <p class="text-white"> Z Hyperlite Summit 35 adalah backpack yang dirancang untuk kegiatan summit attack dan speed hiking. Tas ini memiliki kompartemen utamadan kompartemen eksternal, seperti saku samping, saku tutup atas, dan saku sisip depan untuk menyimpan perlengkapan.  </p>
-                                    <button class="btn btn-sm text-white px-0" type="button">Sewa&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
-                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
-                                        </svg><br></button>
-                                </div>
+                        <div class="card-body" style="padding:0px;background-color:var(--yellow-2);">
+                            <img src="https://d1yutv2xslo29o.cloudfront.net/product/variant/media/web/910009354_Image1_1_fcd2.webp"
+                                class="img-fluid" alt="">
+                            <div class="p-3">
+                                <h4 class="fw-bold mt-3 text-white">Z-HYPERLITE SUMMIT 35</h4>
+                                <p class="text-white"> Z Hyperlite Summit 35 adalah backpack yang dirancang untuk
+                                    kegiatan summit attack dan speed hiking. Tas ini memiliki kompartemen utamadan
+                                    kompartemen eksternal, seperti saku samping, saku tutup atas, dan saku sisip depan
+                                    untuk menyimpan perlengkapan. </p>
+                                <button class="btn btn-sm text-white px-0" type="button">Sewa&nbsp;<svg
+                                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8">
+                                        </path>
+                                    </svg><br></button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -151,18 +204,22 @@
         <div class="container py-4 py-xl-5">
             <div class="row">
                 <div class="col-md-6">
-                    <h3 class="display-6 fw-bold pb-md-4">Apa sih kata <span class="underline">mereka&nbsp;</span> tentang Yuk! Kemah?</h3>
+                    <h3 class="display-6 fw-bold pb-md-4">Apa sih kata <span class="underline">mereka&nbsp;</span>
+                        tentang Yuk! Kemah?</h3>
                 </div>
                 <div class="col-md-6 pt-4">
-                    <p class="text-muted mb-4">Sudah banyak orang menggunakan Yuk! Kemah, ini pesan-pesan yang mereka tinggalkan setelah menggunakan layanan kami.</p>
+                    <p class="text-muted mb-4">Sudah banyak orang menggunakan Yuk! Kemah, ini pesan-pesan yang mereka
+                        tinggalkan setelah menggunakan layanan kami.</p>
                 </div>
             </div>
             <div class="row gy-4 gy-md-0">
-                <div class="col-md-6 d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                <div
+                    class="col-md-6 d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
                     <div>
                         <div class="m-2 row align-items-center" data-aos="fade-right">
                             <div class="col-3">
-                                <img src="{{ asset('img/testimonies/navia.png') }}" class="img-fluid rounded-circle" alt="">
+                                <img src="{{ asset('img/testimonies/navia.png') }}" class="img-fluid rounded-circle"
+                                    alt="">
                             </div>
                             <div class="col-9">
                                 <h5 class="fw-bold">"Yuk! Kemah menyala begini euy."</h5>
@@ -171,7 +228,8 @@
                         </div>
                         <div class="m-2 row align-items-center" data-aos="fade-right">
                             <div class="col-3">
-                                <img src="{{ asset('img/testimonies/nayi.png') }}" class="img-fluid rounded-circle" alt="">
+                                <img src="{{ asset('img/testimonies/nayi.png') }}" class="img-fluid rounded-circle"
+                                    alt="">
                             </div>
                             <div class="col-9">
                                 <h5 class="fw-bold">"Affordable banget."</h5>
@@ -180,7 +238,8 @@
                         </div>
                         <div class="m-2 row align-items-center" data-aos="fade-right">
                             <div class="col-3">
-                                <img src="{{ asset('img/testimonies/xianyun.jpg') }}" class="img-fluid rounded-circle" alt="">
+                                <img src="{{ asset('img/testimonies/xianyun.jpg') }}" class="img-fluid rounded-circle"
+                                    alt="">
                             </div>
                             <div class="col-9">
                                 <h5 class="fw-bold">"Thx mhs."</h5>
@@ -190,7 +249,8 @@
                     </div>
                 </div>
                 <div class="col-md-6 order-first order-md-last">
-                    <div><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="assets/img/illustrations/teamwork.svg"></div>
+                    <div><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;"
+                            src="assets/img/illustrations/teamwork.svg"></div>
                 </div>
             </div>
         </div>
@@ -199,25 +259,28 @@
     {{-- Kontak Section --}}
     <section class="py-4 py-xl-5" id="contact">
         <div class="container">
-            <div class="text-white bg-primary border rounded border-0 border-primary d-flex flex-column justify-content-between flex-lg-row p-4 p-md-5">
+            <div
+                class="text-white bg-primary border rounded border-0 border-primary d-flex flex-column justify-content-between flex-lg-row p-4 p-md-5">
                 <div class="pb-2 pb-lg-1">
                     <h2 class="fw-bold text-secondary mb-2">Mau sewa atau nanya-nanya dulu?</h2>
                     <p class="mb-0">Bisa hubungi kami lewat tombol dibawah ini.</p>
                 </div>
-                <div class="my-2"><a class="btn btn-light fs-5 py-2 px-4" role="button" href="contacts.html">Kontak Kami</a></div>
+                <div class="my-2"><a class="btn btn-light fs-5 py-2 px-4" role="button"
+                        href="contacts.html">Kontak Kami</a></div>
             </div>
         </div>
     </section>
 
     {{-- Footer --}}
-    <footer>
-        <div class="container py-4 py-lg-5" style="background-color: var(--navy);">
+    <footer style="background-color: var(--navy);">
+        <div class="container py-4 py-lg-5">
             <div class="text-center my-5">
                 <img src="img/yukkemah.png" alt="" class="img-fluid" style="width: 200px">
             </div>
             {{-- <hr> --}}
             <div class="d-flex justify-content-between align-items-center pt-3" style="color: var(--yellow-1);">
-                <p class="mb-0" style="font-size: 0.9em">Copyright © 2024 Yuk! Kemah (Template by Bootstrap Studio)</p>
+                <p class="mb-0" style="font-size: 0.9em">Copyright © 2024 Yuk! Kemah (Template by Bootstrap Studio)
+                </p>
                 {{-- <ul class="list-inline mb-0" style="font-size:1.3em;">
                     <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
                             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Brand;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Validation\ValidationException;
 
 class BrandController extends Controller
 {
@@ -12,7 +14,9 @@ class BrandController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.brands.index', [
+            'brands' => Brand::all()
+        ]);
     }
 
     /**
@@ -28,7 +32,22 @@ class BrandController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $validatedData = $request->validate([
+                'name' => 'required'
+            ]);
+        } catch (ValidationException $e) {
+            toast('Data gagal ditambahkan', 'error');
+            return back()
+                ->withInput()
+                ->withErrors($e->validator)
+                ->with('modal_id', 'formAdd');
+        }
+
+        Brand::create($validatedData);
+
+        toast('Data berhasil ditambahkan', 'success');
+        return redirect('/dashboard/brands');
     }
 
     /**
@@ -52,7 +71,22 @@ class BrandController extends Controller
      */
     public function update(Request $request, Brand $brand)
     {
-        //
+        try {
+            $validatedData = $request->validate([
+                'name' => 'required'
+            ]);
+        } catch (ValidationException $e) {
+            toast('Data gagal ditambahkan', 'error');
+            return back()
+                ->withInput()
+                ->withErrors($e->validator)
+                ->with('modal_id', 'formAdd');
+        }
+
+        $brand->update($validatedData);
+
+        toast('Data berhasil diedit', 'success');
+        return redirect('/dashboard/brands');
     }
 
     /**
@@ -60,6 +94,18 @@ class BrandController extends Controller
      */
     public function destroy(Brand $brand)
     {
-        //
+        try {
+            $brand->delete();
+        } catch (\Throwable $th) {
+            toast('Data gagal dihapus', 'error');
+            return back();
+        }
+
+        if ($brand->image) {
+            Storage::delete($brand->image);
+        }
+
+        toast('Data berhasil dihapus', 'success');
+        return redirect('/dashboard/brands');
     }
 }

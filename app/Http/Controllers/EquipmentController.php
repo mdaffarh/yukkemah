@@ -124,7 +124,7 @@ class EquipmentController extends Controller
         try {
             $equipment->delete();
         } catch (\Throwable $th) {
-            toast($th, 'error');
+            toast('Data gagal dihapus', 'error');
             return back();
         }
 

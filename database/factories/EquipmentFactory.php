@@ -19,7 +19,7 @@ class EquipmentFactory extends Factory
         return [
             'name' => fake()->word(),
             'price_per_day' => fake()->numberBetween(20000, 200000),
-            'description' => fake()->paragraph(),
+            'description' => fake()->paragraph(1),
             'category_id' => rand(1, 3),
             'brand_id' => rand(1, 3),
             'stock' => rand(0, 5),
