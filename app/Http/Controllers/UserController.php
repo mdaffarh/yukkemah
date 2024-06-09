@@ -48,6 +48,8 @@ class UserController extends Controller
                 ->with('modal_id', 'formAdd');
         }
 
+        $validatedData['role'] = 'cust';
+
         User::create($validatedData);
 
         toast('Data berhasil ditambahkan', 'success');
@@ -90,7 +92,7 @@ class UserController extends Controller
 
             $validatedData = $request->validate($rules);
         } catch (ValidationException $e) {
-            toast('Data gagal ditambahkan', 'error');
+            toast('Data gagal diedit', 'error');
             return back()
                 ->withInput()
                 ->withErrors($e->validator)

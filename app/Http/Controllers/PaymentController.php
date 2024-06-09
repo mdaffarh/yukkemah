@@ -12,7 +12,9 @@ class PaymentController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.payments.index', [
+            'payments' => Payment::with('rental')->orderBy('payment_date', 'DESC')->get()
+        ]);
     }
 
     /**

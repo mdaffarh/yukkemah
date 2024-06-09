@@ -17,8 +17,8 @@ return new class extends Migration
             $table->foreignIdFor(Rental::class)->nullable();
             $table->integer('total');
             $table->dateTime('payment_date');
-            $table->string('payment_method');
-            $table->string('status');
+            $table->string('payment_method')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

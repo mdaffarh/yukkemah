@@ -23,7 +23,7 @@ class EquipmentFactory extends Factory
             'category_id' => rand(1, 3),
             'brand_id' => rand(1, 3),
             'stock' => rand(0, 5),
-            'on_rent' => rand(0, 5)
+            'on_rent' => 0
         ];
     }
 }

@@ -90,13 +90,14 @@
                                 <p class="text-muted"> For those who take going off the beaten path literally, there’s
                                     the Fresh Foam X Hierro, a dedicated, off-road application of our best running
                                     technology. </p>
-                                <button class="btn btn-sm px-0" type="button">Sewa&nbsp;<svg
-                                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                        fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                <a href="{{ auth()->user() ? '/dashboard/rentals' : '/login' }}" class="btn btn-sm px-0"
+                                    type="button">Sewa&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                                        height="1em" fill="currentColor" viewBox="0 0 16 16"
+                                        class="bi bi-arrow-right">
                                         <path fill-rule="evenodd"
                                             d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8">
                                         </path>
-                                    </svg><br></button>
+                                    </svg><br></a>
                             </div>
                         </div>
                     </div>
@@ -110,14 +111,14 @@
                                 <h4 class="fw-bold mt-3">Terrex Free Hiker GORE-TEX Hiking Shoes 2.0</h4>
                                 <p class="text-muted"> Lightweight hiking shoes offer next-level comfort and support to
                                     extend your range in the mountains. A BOOST midsole brings energy to every step to
-                                    keep you moving on hikes long and short. </p>
-                                <button class="btn btn-sm px-0" type="button">Sewa&nbsp;<svg
-                                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                        fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
-                                        <path fill-rule="evenodd"
-                                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8">
-                                        </path>
-                                    </svg><br></button>
+                                    <a href="{{ auth()->user() ? '/dashboard/rentals' : '/login' }}"
+                                        class="btn btn-sm px-0" type="button">Sewa&nbsp;<svg
+                                            xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                            fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                            <path fill-rule="evenodd"
+                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8">
+                                            </path>
+                                        </svg><br></a>
                             </div>
                         </div>
                     </div>
@@ -133,13 +134,14 @@
                                     mid-cut upper with GORE-TEX® waterproof fabric, and toe protection to create a
                                     protective shell of durability and traction around the signature Fresh Foam X
                                     cushioning. </p>
-                                <button class="btn btn-sm px-0" type="button">Sewa&nbsp;<svg
+                                <a href="{{ auth()->user() ? '/dashboard/rentals' : '/login' }}"
+                                    class="btn btn-sm px-0" type="button">Sewa&nbsp;<svg
                                         xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                         fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
                                         <path fill-rule="evenodd"
                                             d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8">
                                         </path>
-                                    </svg><br></button>
+                                    </svg><br></a>
                             </div>
                         </div>
                     </div>
@@ -164,13 +166,14 @@
                                     pekan ini. Desain bukaan depan memberimu akses mudah untuk mengemas bawaanmu ke
                                     dalam kompartemen utamanya yang luas, bahkan perlengkapanmu untuk perjalanan 2-3
                                     hari. </p>
-                                <button class="btn btn-sm text-white px-0" type="button">Sewa&nbsp;<svg
+                                <a href="{{ auth()->user() ? '/dashboard/rentals' : '/login' }}"
+                                    class="btn btn-sm text-white px-0" type="button">Sewa&nbsp;<svg
                                         xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                         fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
                                         <path fill-rule="evenodd"
                                             d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8">
                                         </path>
-                                    </svg><br></button>
+                                    </svg><br></a>
                             </div>
                         </div>
                     </div>
@@ -186,13 +189,14 @@
                                 <p class="text-white">Consina Everest hadir sebagai teman petualanganmu ke tempat
                                     tempat eksotis dunia. Menampilkan inovasi terbaru dari Consina, Everest menggunakan
                                     bahan dan design terbaik untuk ransel di kelas 60-65L. </p>
-                                <button class="btn btn-sm text-white px-0" type="button">Sewa&nbsp;<svg
+                                <a href="{{ auth()->user() ? '/dashboard/rentals' : '/login' }}"
+                                    class="btn btn-sm text-white px-0" type="button">Sewa&nbsp;<svg
                                         xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                         fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
                                         <path fill-rule="evenodd"
                                             d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8">
                                         </path>
-                                    </svg><br></button>
+                                    </svg><br></a>
                             </div>
                         </div>
                     </div>
@@ -208,13 +212,14 @@
                                     kegiatan summit attack dan speed hiking. Tas ini memiliki kompartemen utamadan
                                     kompartemen eksternal, seperti saku samping, saku tutup atas, dan saku sisip depan
                                     untuk menyimpan perlengkapan. </p>
-                                <button class="btn btn-sm text-white px-0" type="button">Sewa&nbsp;<svg
+                                <a href="{{ auth()->user() ? '/dashboard/rentals' : '/login' }}"
+                                    class="btn btn-sm text-white px-0" type="button">Sewa&nbsp;<svg
                                         xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                         fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
                                         <path fill-rule="evenodd"
                                             d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8">
                                         </path>
-                                    </svg><br></button>
+                                    </svg><br></a>
                             </div>
                         </div>
                     </div>
@@ -262,8 +267,8 @@
                         </div>
                         <div class="m-2 row align-items-center" data-aos="fade-right">
                             <div class="col-3">
-                                <img src="{{ asset('img/testimonies/xianyun.jpg') }}" class="img-fluid rounded-circle"
-                                    alt="">
+                                <img src="{{ asset('img/testimonies/xianyun.jpg') }}"
+                                    class="img-fluid rounded-circle" alt="">
                             </div>
                             <div class="col-9">
                                 <h5 class="fw-bold">"Thx mhs."</h5>
@@ -289,8 +294,8 @@
                     <h2 class="fw-bold text-secondary mb-2">Mau sewa atau nanya-nanya dulu?</h2>
                     <p class="mb-0">Bisa hubungi kami lewat tombol dibawah ini.</p>
                 </div>
-                <div class="my-2"><a class="btn btn-light fs-5 py-2 px-4" role="button"
-                        href="contacts.html">Kontak Kami</a></div>
+                <div class="my-2"><a class="btn btn-light fs-5 py-2 px-4" role="button" href="#">Kontak
+                        Kami</a></div>
             </div>
         </div>
     </section>

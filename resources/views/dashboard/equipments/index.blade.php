@@ -130,6 +130,8 @@
                                 <th>Merek</th>
                                 <th>Deskripsi</th>
                                 <th>Kategori</th>
+                                <th>Stok</th>
+                                <th>Disewa</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -147,9 +149,11 @@
                                     <td>{{ $e->description }}</td>
                                     <td>
                                         @if ($e->category->name)
-                                            {{ $e->category->name }}
+                                        {{ $e->category->name }}
                                         @endif
-                                    </td>
+                                        </td>
+                                    <td>{{ $e->stock }}</td>
+                                    <td>{{ $e->on_rent }}</td>
                                     <td>
                                         <div class="btn-group" role="group">
                                             {{-- View Detail Button --}}
@@ -412,45 +416,6 @@
                                 {{-- Modal Edit End --}}
                             @endforeach
                         </tbody>
-                        <tfoot>
-                            <tr>
-                                <td>
-                                    <strong>
-                                        No
-                                    </strong>
-                                </td>
-                                <td>
-                                    <strong>
-                                        Nama Barang
-                                    </strong>
-                                </td>
-                                <td>
-                                    <strong>
-                                        Harga Sewa
-                                    </strong>
-                                </td>
-                                <td>
-                                    <strong>
-                                        Merek
-                                    </strong>
-                                </td>
-                                <td>
-                                    <strong>
-                                        Deskripsi
-                                    </strong>
-                                </td>
-                                <td>
-                                    <strong>
-                                        Kategori
-                                    </strong>
-                                </td>
-                                <td>
-                                    <strong>
-                                        Action
-                                    </strong>
-                                </td>
-                            </tr>
-                        </tfoot>
                     </table>
                 </div>
             </div>

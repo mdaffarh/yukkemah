@@ -75,7 +75,7 @@ class BrandController extends Controller
                 'name' => 'required'
             ]);
         } catch (ValidationException $e) {
-            toast('Data gagal ditambahkan', 'error');
+            toast('Data gagal diedit', 'error');
             return back()
                 ->withInput()
                 ->withErrors($e->validator)

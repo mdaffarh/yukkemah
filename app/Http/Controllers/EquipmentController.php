@@ -96,7 +96,7 @@ class EquipmentController extends Controller
                 'brand_id' => 'required',
             ]);
         } catch (ValidationException $e) {
-            toast('Data gagal ditambahkan', 'error');
+            toast('Data gagal diedit', 'error');
             return back()
                 ->withInput()
                 ->withErrors($e->validator)

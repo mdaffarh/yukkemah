@@ -5,6 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="refresh" content="30">
     <title>
         @if (View::hasSection('title'))
             Yuk! Kemah - @yield('title')
@@ -65,14 +66,22 @@
                                 class="ms-md-2">Penyewaan</span>
                         </a>
                     </li>
-                    <li class="nav-item"><a class="{{ Request::is('dashboard/payments*') ? 'active' : '' }} nav-link"
-                            href="/dashboard/payments"><i class="  fa solid fa-money-bill"></i><span
-                                class="ms-md-1">Pembayaran</span>
-                        </a>
-                    </li>
                     <li class="nav-item"><a class="{{ Request::is('dashboard/reports*') ? 'active' : '' }} nav-link"
                             href="/dashboard/reports"><i class=" fa solid fa-file-pdf"></i><span
                                 class="ms-md-2">Report</span>
+                        </a>
+                    </li>
+                    <hr>
+                    <li class="nav-item"><a class="{{ Request::is('dashboard/payments*') ? 'active' : '' }} nav-link"
+                            href="/dashboard/payments"><i class="  fa solid fa-money-bill"></i><span class="ms-md-1">Log
+                                Pembayaran</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="{{ Request::is('dashboard/rental-log') ? 'active' : '' }} nav-link"
+                            href="/dashboard/rental-log">
+                            <i class="fa solid fa-book"></i>
+                            <span class="ms-md-1">Log Penyewaan</span>
                         </a>
                     </li>
                     <hr>
@@ -103,14 +112,15 @@
                             <i class="fa solid fa-arrow-left"></i><span class="ms-md-2">Logout</span>
                         </button>
                     </li>
-
                 </ul>
-                <div class="text-center d-none d-md-inline text-dark"><button class="btn rounded-circle border-0"
-                        id="sidebarToggle" type="button"></button></div>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0"
+                        id="sidebarToggle" type="button" style="color: var(--navy)"></button></div>
+                <small class="mt-5 text-small d-none d-lg-block" style="color: var(--navy)">Template by Bootstrap
+                    Studio</small>
             </div>
             {{-- Modal Delete --}}
-            <div class="modal fade" id="modalLogout" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="detailLabel" aria-hidden="true">
+            <div class="modal fade" id="modalLogout" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="detailLabel" aria-hidden="true">
                 <div class="modal-dialog modal-sm modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-body text-center mt-2">
@@ -163,13 +173,8 @@
                 </nav>
                 @yield('container')
             </div>
-            <footer class="bg-white sticky-footer">
-                <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright Yuk! Kemah © 2024 (Template by Bootstrap
-                            Studio)</span></div>
-                </div>
-            </footer>
-        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+        </div>
+        <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('dashboard-assets/js/theme.js') }}"></script>
