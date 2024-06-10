@@ -16,13 +16,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-
         User::create([
             'username' => 'admin',
             'password' => '3001',
@@ -46,7 +39,13 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'name' => 'Peralatan Masak'
-            ]
+            ],
+            [
+                'name' => 'Pakaian'
+            ],
+            [
+                'name' => 'Lainnya'
+            ],
         ];
 
         foreach ($categories as $c) {
@@ -66,13 +65,19 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'name' => 'Adidas'
-            ]
+            ],
+            [
+                'name' => 'Hike  Run'
+            ],
+            [
+                'name' => 'Unbrand'
+            ],
         ];
 
         foreach ($brands as $b) {
             Brand::create($b);
         }
 
-        Equipment::factory(10)->create();
+        // Equipment::factory(10)->create();
     }
 }

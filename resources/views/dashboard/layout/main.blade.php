@@ -5,7 +5,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta http-equiv="refresh" content="30">
     <title>
         @if (View::hasSection('title'))
             Yuk! Kemah - @yield('title')
@@ -54,58 +53,78 @@
                     <img src="{{ asset('img/yukkemah.png') }}" alt="" class="img-fluid w-50">
                 </a>
                 <hr class="sidebar-divider my-0">
-                <ul class="navbar-nav" id="accordionSidebar">
-                    <li class="nav-item">
-                        <a class="{{ Request::is('dashboard') ? 'active' : '' }} nav-link" href="/dashboard">
-                            <i class=" fa solid fa-chart-line"></i>
-                            <span class="ms-md-1">Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="nav-item"><a class="{{ Request::is('dashboard/rentals*') ? 'active' : '' }} nav-link"
-                            href="/dashboard/rentals"><i class="  fa solid fa-table"></i><span
-                                class="ms-md-2">Penyewaan</span>
-                        </a>
-                    </li>
-                    <li class="nav-item"><a class="{{ Request::is('dashboard/reports*') ? 'active' : '' }} nav-link"
-                            href="/dashboard/reports"><i class=" fa solid fa-file-pdf"></i><span
-                                class="ms-md-2">Report</span>
-                        </a>
-                    </li>
-                    <hr>
-                    <li class="nav-item"><a class="{{ Request::is('dashboard/payments*') ? 'active' : '' }} nav-link"
-                            href="/dashboard/payments"><i class="  fa solid fa-money-bill"></i><span class="ms-md-1">Log
-                                Pembayaran</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="{{ Request::is('dashboard/rental-log') ? 'active' : '' }} nav-link"
-                            href="/dashboard/rental-log">
-                            <i class="fa solid fa-book"></i>
-                            <span class="ms-md-1">Log Penyewaan</span>
-                        </a>
-                    </li>
-                    <hr>
+                <ul class="navbar-nav mt-3" id="accordionSidebar">
+                    @can('admin')
+                        <li class="nav-item">
+                            <a class="{{ Request::is('dashboard') ? 'active' : '' }} nav-link" href="/dashboard">
+                                <i class=" fa solid fa-chart-line"></i>
+                                <span class="ms-md-1">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="{{ Request::is('dashboard/rentals*') ? 'active' : '' }} nav-link"
+                                href="/dashboard/rentals"><i class="  fa solid fa-table"></i><span
+                                    class="ms-md-2">Penyewaan</span>
+                            </a>
+                        </li>
+                    @endcan
+
+                    @can('cust')
+                        <li class="nav-item"><a class="{{ Request::is('dashboard/rentals*') ? 'active' : '' }} nav-link"
+                                href="/dashboard/rentals"><i class="  fa solid fa-table"></i><span class="ms-md-2">Booking
+                                    Penyewaan</span>
+                            </a>
+                        </li>
+                    @endcan
+
+                    @can('admin')
+                        <li class="nav-item"><a class="{{ Request::is('dashboard/reports*') ? 'active' : '' }} nav-link"
+                                href="/dashboard/reports"><i class=" fa solid fa-file-pdf"></i><span
+                                    class="ms-md-2">Report</span>
+                            </a>
+                        </li>
+                        <hr>
+                        <li class="nav-item"><a class="{{ Request::is('dashboard/payments*') ? 'active' : '' }} nav-link"
+                                href="/dashboard/payments"><i class="  fa solid fa-money-bill"></i><span class="ms-md-1">Log
+                                    Pembayaran</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="{{ Request::is('dashboard/rental-log') ? 'active' : '' }} nav-link"
+                                href="/dashboard/rental-log">
+                                <i class="fa solid fa-book"></i>
+                                <span class="ms-md-1">Log Penyewaan</span>
+                            </a>
+                        </li>
+                        <hr>
+                    @endcan
                     <li class="nav-item">
                         <a class="{{ Request::is('dashboard/equipments*') ? 'active' : '' }} nav-link"
                             href="/dashboard/equipments">
                             <i class="fa solid fa-toolbox"></i>
-                            <span class="ms-md-1">Peralatan</span>
+                            @can('admin')
+                                <span class="ms-md-1">Peralatan</span>
+                            @elsecan('cust')
+                                <span class="ms-md-1">Detail dan Stok Peralatan</span>
+                            @endcan
                         </a>
                     </li>
-                    <li class="nav-item"><a class="{{ Request::is('dashboard/users*') ? 'active' : '' }} nav-link"
-                            href="/dashboard/users"><i class="fas fa-user"></i><span class="ms-md-2">Pelanggan</span>
-                        </a>
-                    </li>
-                    <li class="nav-item"><a class="{{ Request::is('dashboard/categories*') ? 'active' : '' }} nav-link"
-                            href="/dashboard/categories"><i class="fa solid fa-list"></i><span
-                                class="ms-md-2">Kategori</span>
-                        </a>
-                    </li>
-                    <li class="nav-item"><a class="{{ Request::is('dashboard/brands*') ? 'active' : '' }} nav-link"
-                            href="/dashboard/brands"><i class="fa solid fa-certificate"></i><span
-                                class="ms-md-2">Merek</span>
-                        </a>
-                    </li>
+
+                    @can('admin')
+                        <li class="nav-item"><a class="{{ Request::is('dashboard/users*') ? 'active' : '' }} nav-link"
+                                href="/dashboard/users"><i class="fas fa-user"></i><span class="ms-md-2">Pelanggan</span>
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="{{ Request::is('dashboard/categories*') ? 'active' : '' }} nav-link"
+                                href="/dashboard/categories"><i class="fa solid fa-list"></i><span
+                                    class="ms-md-2">Kategori</span>
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="{{ Request::is('dashboard/brands*') ? 'active' : '' }} nav-link"
+                                href="/dashboard/brands"><i class="fa solid fa-certificate"></i><span
+                                    class="ms-md-2">Merek</span>
+                            </a>
+                        </li>
+                    @endcan
                     <hr>
                     <li class="nav-item">
                         <button type="submit" class="nav-link" data-bs-toggle="modal" data-bs-target="#modalLogout">
@@ -115,8 +134,10 @@
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0"
                         id="sidebarToggle" type="button" style="color: var(--navy)"></button></div>
-                <small class="mt-5 text-small d-none d-lg-block" style="color: var(--navy)">Template by Bootstrap
-                    Studio</small>
+                @can('admin')
+                    <small class="mt-5 text-small d-none d-lg-block" style="color: var(--navy)">Template by Bootstrap
+                        Studio</small>
+                @endcan
             </div>
             {{-- Modal Delete --}}
             <div class="modal fade" id="modalLogout" data-bs-backdrop="static" data-bs-keyboard="false"

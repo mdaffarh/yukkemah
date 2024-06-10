@@ -36,9 +36,7 @@
                                                 class="form-control text-primary-emphasis  @error('username') is-invalid @enderror"
                                                 name="username" value="{{ old('username') }}">
                                             @error('username')
-                                                <div class="invalid-feedback">
-                                                    {{ $message }}
-                                                </div>
+                                                <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
                                         <div class="mb-3">
@@ -47,9 +45,7 @@
                                                 class="form-control text-primary-emphasis  @error('password') is-invalid @enderror"
                                                 name="password" value="{{ old('password') }}">
                                             @error('password')
-                                                <div class="invalid-feedback">
-                                                    {{ $message }}
-                                                </div>
+                                                <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
                                         <div class="mb-3">
@@ -58,9 +54,7 @@
                                                 class="form-control text-primary-emphasis  @error('name') is-invalid @enderror"
                                                 name="name" value="{{ old('name') }}">
                                             @error('name')
-                                                <div class="invalid-feedback">
-                                                    {{ $message }}
-                                                </div>
+                                                <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
                                         <div class="mb-3">
@@ -82,9 +76,7 @@
                                                 </label>
                                             </div>
                                             @error('gender')
-                                                <div class="invalid-feedback">
-                                                    {{ $message }}
-                                                </div>
+                                                <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
                                         <div class="mb-3">
@@ -93,18 +85,14 @@
                                                 class="form-control text-primary-emphasis  @error('email') is-invalid @enderror"
                                                 name="email" value="{{ old('email') }}">
                                             @error('email')
-                                                <div class="invalid-feedback">
-                                                    {{ $message }}
-                                                </div>
+                                                <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">Alamat</label>
                                             <textarea name="address" class="form-control" cols="50" @error('address') is-invalid @enderror>{{ old('address') }}</textarea>
                                             @error('address')
-                                                <div class="invalid-feedback">
-                                                    {{ $message }}
-                                                </div>
+                                                <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
                                 </div>

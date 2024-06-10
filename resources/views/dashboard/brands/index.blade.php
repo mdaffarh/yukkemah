@@ -157,9 +157,7 @@
                                                             name="name"
                                                             value="{{ $b->name ? $b->name : old('name') }}">
                                                         @error('name')
-                                                            <div class="invalid-feedback">
-                                                                {{ $message }}
-                                                            </div>
+                                                            <small class="text-danger">{{ $message }}</small>
                                                         @enderror
                                                     </div>
                                             </div>

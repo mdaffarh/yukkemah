@@ -9,6 +9,8 @@ use App\Models\RentalItem;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Validation\ValidationException;
 
 class RentalController extends Controller
@@ -18,8 +20,13 @@ class RentalController extends Controller
      */
     public function index()
     {
+        $rentals = Rental::with('user', 'items')->where('status', '!=', 'Pesanan Dibatalkan')->where('status', '!=', 'Penyewaan Selesai')->orderBy('created_at', 'DESC')->get();
+        if (Gate::allows('cust')) {
+            $rentals = Rental::with('user', 'items')->where('user_id', Auth::id())->orderBy('created_at', 'DESC')->get();
+        }
+
         return view('dashboard.rentals.index', [
-            'rentals' => Rental::with('user', 'items')->where('status', '!=', 'Pesanan Dibatalkan')->where('status', '!=', 'Penyewaan Selesai')->orderBy('created_at', 'DESC')->get(),
+            'rentals' => $rentals,
             'users' => User::where('role', '!=', 'admin')->get(),
             'equipments' => Equipment::where('stock', '>', '0')->orderBy('name')->get()
         ]);

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
@@ -27,6 +28,7 @@ class LoginController extends Controller
         User::create($validatedData);
 
         toast('Daftar berhasil! Silakan login', 'success');
+
         return redirect('/login');
     }
 
@@ -41,6 +43,10 @@ class LoginController extends Controller
             request()->session()->regenerate();
 
             toast('Berhasil login!', 'success');
+
+            if (Gate::allows('cust')) {
+                return redirect()->intended('/dashboard/rentals');
+            }
             return redirect()->intended('/dashboard');
         }
 

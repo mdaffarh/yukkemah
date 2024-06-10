@@ -35,9 +35,7 @@
                                                 class="form-control text-primary-emphasis  @error('name') is-invalid @enderror"
                                                 name="name" value="{{ old('name') }}">
                                             @error('name')
-                                                <div class="invalid-feedback">
-                                                    {{ $message }}
-                                                </div>
+                                                <small class="text-danger">{{ $message }}</small>
                                             @enderror
                                         </div>
                                 </div>

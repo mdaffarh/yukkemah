@@ -58,6 +58,7 @@ class EquipmentController extends Controller
             $validatedData['image'] = $request->file('image')->store('images');
         }
 
+        $validatedData['on_rent'] = 0;
         Equipment::create($validatedData);
 
         toast('Data berhasil ditambahkan', 'success');
